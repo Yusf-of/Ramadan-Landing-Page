@@ -1,0 +1,168 @@
+:root {
+  --purple: #352452;
+  --white: #f6e9fc;
+  --orange: #fcc907;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  font-size: 16px;
+}
+
+h1::selection,
+p::selection,
+a::selection {
+  background: var(--orange);
+  color: #fff;
+}
+
+.container {
+  padding-left: 25px;
+  padding-right: 25px;
+  margin: auto;
+  background-color: var(--purple);
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 970px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  margin-bottom: 60px;
+}
+
+nav .logo {
+  height: 80px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #f0f;
+}
+
+nav .links ul {
+  list-style: none;
+  display: flex;
+}
+
+nav .links ul li {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+nav .links ul li a {
+  color: var(--white);
+}
+
+nav .links ul li:first-child a {
+  color: var(--orange);
+}
+
+nav > a {
+  color: var(--orange);
+  padding: 15px 30px;
+  border: 3px solid var(--orange);
+  border-radius: 40px;
+}
+
+.page {
+  display: flex;
+}
+
+.page .picture {
+  filter: brightness(2);
+}
+
+.page .content h1 {
+  color: var(--white);
+  font-size: 40px;
+  font-family: "Bubblegum Sans", cursive;
+  text-transform: capitalize;
+  letter-spacing: 3px;
+}
+
+.page .content h1:first-child {
+  margin-bottom: 10px;
+}
+
+.page .content h1:nth-child(2) {
+  color: var(--orange);
+  margin-top: 10px;
+}
+
+.page .content p {
+  color: var(--white);
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.page .content div {
+  margin: 60px;
+  text-align: center;
+}
+
+.page .content a {
+  text-decoration: none;
+  color: var(--orange);
+  padding: 15px 30px;
+  border: 3px solid var(--orange);
+  border-radius: 40px;
+}
+
+@media (max-width: 991px) {
+  .page .content div {
+    margin: 40px;
+  }
+  .page .content a {
+    text-decoration: none;
+    padding: 15px 24px;
+    border: 3px solid var(--orange);
+    border-radius: 40px;
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 767px) {
+  .page {
+    flex-direction: column-reverse;
+  }
+}
+a {
+  transition: 0.4s;
+}
+
+.log:hover, 
+.page a:hover {
+  background-color: var(--orange);
+  color: var(--white) !important;
+}
+
+nav .links a:hover {
+  color: var(--orange);
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--orange);
+}
